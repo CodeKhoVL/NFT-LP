@@ -1,5 +1,33 @@
-import Image from "next/image";
-
+import Hero from '@components/section.hero'
+import Introduction from '@components/section.introduction'
+import Evolution from '@components/section.evolution'
+import Story from '@components/section.story'
+import About from '@components/section.about'
+import Useful from '@components/section.useful'
+import Series from '@components/section.series'
+import App from '@components/section.app'
+import Traco from '@components/section.tracohunter'
+import FAQ from '@components/section.faq'
+const AppHeader = () => {
+  return (
+    <main className="relative">
+      <Hero />
+      <div className="overflow-hidden bg-[url(/images/bg-nft.png)] bg-cover">
+      <Introduction />
+      <Evolution />
+      <Story />
+      <About />
+      <Useful />
+      <Series />
+      <App />
+      <Traco />
+      <FAQ/>
+      </div> 
+    </main>
+  );
+};
+export default AppHeader;
+/*
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -99,3 +127,4 @@ export default function Home() {
     </div>
   );
 }
+ */

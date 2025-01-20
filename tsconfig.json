@@ -19,9 +19,20 @@
       }
     ],
     "paths": {
-      "@component/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@api/*": ["./src/api/*"],
+      "@styles/*": ["./src/styles/*"],
+      /*
+      "@global*": ["./src/shared/global*"],
+      "@services*": ["./src/app/services*"],
+      "@models*": ["./src/app/models*"],
+      "@assets*": ["./src/shared/assets*"],
+      "@shared*": ["./src/shared*"],
+      "@ui*": ["./src/app/components/ui*"] 
+      */
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/section.useful.jsx", "src/components/ui/card.jsx", "src/components/section.tracohunter.jsx"],
   "exclude": ["node_modules"]
 }

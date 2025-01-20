@@ -1,0 +1,35 @@
+.custom-fade-rotate-right {
+    opacity: 1 !important;
+    transform: rotate(10deg) !important;
+    transition: opacity 0.2s,
+        transform 0.2s ease-in-out !important;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.Marque-rotate {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+@media not all and (min-width: 1440px) {
+    .bg-size-auto {
+        background-size: 100% auto;
+    }
+}
+
+.evolution-text {
+    background: linear-gradient(#ff75c3, #ffa647 20%, #ffe83f 40%, #9fff5b 60%, #70e2ff 80%, #cd93ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
