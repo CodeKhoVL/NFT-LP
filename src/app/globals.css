@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth !important
+  scroll-behavior: smooth !important;
 }
 
 body {
-  font-size: 18px
+  font-size: 18px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Loại bỏ cuộn ngang */
+  max-width: 100%; /* Đảm bảo nội dung không vượt quá màn hình */
 }
 
 .rollingText {
@@ -59,7 +64,7 @@ body {
   --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59, 130, 246, .5);
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -81,7 +86,7 @@ body {
   --tw-backdrop-invert: ;
   --tw-backdrop-opacity: ;
   --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia:
+  --tw-backdrop-sepia: ;
 }
 
 ::backdrop {
@@ -109,7 +114,7 @@ body {
   --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59, 130, 246, .5);
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -131,7 +136,7 @@ body {
   --tw-backdrop-invert: ;
   --tw-backdrop-opacity: ;
   --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia:
+  --tw-backdrop-sepia: ;
 }
 
 .close-trigger,
@@ -143,31 +148,33 @@ body {
   display: block;
   width: 42px;
   height: 42px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .close-trigger:hover .close-trigger-bar:before,
 .close-trigger:hover .menu-trigger-bar:before,
 .menu-trigger:hover .close-trigger-bar:before,
 .menu-trigger:hover .menu-trigger-bar:before {
-  width: 100%
+  width: 100%;
 }
 
 .close-trigger {
   top: 42px;
-  z-index: 5
+  z-index: 5;
 }
 
 .menu-trigger-bar {
   position: relative;
-  margin-bottom: .375rem;
+  margin-bottom: 0.375rem;
   display: block;
-  height: .25rem;
+  height: 0.25rem;
   width: 100%;
   --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0/var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .menu-trigger-bar:before {
@@ -177,33 +184,33 @@ body {
   display: block;
   height: 100%;
   width: 0;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   --tw-content: "";
   /* content:var(--tw-content); */
-  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .menu-trigger-bar.top {
-  width: 50%
+  width: 50%;
 }
 
 .menu-trigger-bar.middle:before {
   left: auto;
-  right: 0
+  right: 0;
 }
 
 .menu-trigger-bar.bottom {
   margin-left: 50%;
-  width: 50%
+  width: 50%;
 }
 
 .close-trigger-bar {
   position: relative;
   display: block;
-  height: .25rem;
+  height: 0.25rem;
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34/var(--tw-bg-opacity))
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity));
 }
 
 .close-trigger-bar:before {
@@ -213,28 +220,30 @@ body {
   display: block;
   height: 100%;
   width: 0;
-  background-color: hsla(0, 0%, 100%, .2);
+  background-color: hsla(0, 0%, 100%, 0.2);
   --tw-content: "";
   content: var(--tw-content);
-  transition: all .3s cubic-bezier(.55, 0, .1, 1)
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .close-trigger-bar.left {
   --tw-translate-y: -100px;
   --tw-translate-x: 100px;
-  --tw-rotate: -45deg
+  --tw-rotate: -45deg;
 }
 
 .close-trigger-bar.left,
 .close-trigger-bar.right {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .close-trigger-bar.right {
   top: -3px;
   --tw-translate-x: -100px;
   --tw-translate-y: -100px;
-  --tw-rotate: 45deg
+  --tw-rotate: 45deg;
 }
 
 .menu-bg {
@@ -243,7 +252,7 @@ body {
   height: 300vh;
   width: 300vw;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255/var(--tw-bg-opacity))
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .menu-bg.middle {
@@ -251,11 +260,13 @@ body {
   top: -100vh;
   --tw-rotate: -45deg;
   --tw-scale-y: 0;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .pointer-events-none {
-  pointer-events: none
+  pointer-events: none;
 }
 
 .fullscreen-image {
@@ -291,7 +302,7 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -317,7 +328,7 @@ body {
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 

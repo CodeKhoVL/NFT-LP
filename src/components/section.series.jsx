@@ -55,6 +55,8 @@ const SeriesSection = () => {
                         WebkitTextStrokeWidth: '3px',
                         WebkitTextStrokeColor: '#000',
                         fontFamily: '"Dela Gothic One", sans-serif',
+                        whiteSpace: 'normal', // Cho phép xuống dòng
+                        wordWrap: 'break-word', // Ngắt từ nếu quá dài
                         fontSize: '38px',
                         fontStyle: 'normal',
                         fontWeight: 400,
@@ -68,7 +70,7 @@ const SeriesSection = () => {
 
                 </div>
                 <div className="flex flex-col self-stretch mt-8 max-md:max-w-full">
-                  <div className="flex flex-col self-center max-w-full text-2xl font-extrabold tracking-wider text-center whitespace-nowrap rounded-none w-[592px]">
+                  <div className="flex flex-col self-center max-w-full text-2xl font-extrabold tracking-wider text-center max-md:whitespace-normal whitespace-nowrap rounded-none w-[592px]">
                     <div className="self-center max-md:max-w-full">
                       ゲームみたいな現実世界を楽しみ尽くせ！
                     </div>
@@ -162,7 +164,7 @@ const SeriesSection = () => {
           </div>
           <div className="flex flex-col self-stretch mt-8 max-md:max-w-full">
           <div className="flex flex-col self-center w-full text-2xl font-extrabold tracking-wider text-center whitespace-nowrap rounded-none">
-          <div className="self-center max-md:max-w-full">これ以上の安心ある！？発行元を完全証明！</div>
+          <div className="self-center max-md:whitespace-normal max-md:max-w-full">これ以上の安心ある！？発行元を完全証明！</div>
           <div className="shrink-0 mt-1.5 h-0.5 border-2 border-orange-500 border-dashed max-md:max-w-full"></div>
           </div>
           <div className="mt-8 text-lg font-medium tracking-wide leading-7 max-md:max-w-full">

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Image from 'next/image'; // Sử dụng cho hình ảnh tối ưu
+import Image from 'next/image'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import '@styles/app.css'; // Đảm bảo đường dẫn chính xác
+import '@styles/app.css'; 
 
 // Dữ liệu card
 const cardData = [
@@ -12,13 +12,13 @@ const cardData = [
     title: "NFTが\nもっと便利に！",
     description:
       "コインがないからNFTを送れないという心配はありません！\nガス代の安い時間を待って送信する必要もありません。",
-    image: "/images/Rectangle 649.png", // Cập nhật đường dẫn hình ảnh
+    image: "/images/Rectangle 649.png", 
   },
   {
     title: "NFTが\nもっと楽しく！",
     description:
       "コレクションしたNFTをいつでも交換可能！\n欲しいデジタルアートやゲーム内アイテムをもらったり、あげたりして楽しもう！",
-    image: "/images/Rectangle 650.png", // Cập nhật đường dẫn hình ảnh
+    image: "/images/Rectangle 650.png", 
   },
 ];
 
@@ -39,7 +39,7 @@ const UsefulSection = () => {
   }, []);
 
   return (
-    <div className="container mx-auto max-w-[1360px] py-8 mt-60"> {/* Thêm margin-top ở đây */}
+    <div className="container mx-auto max-w-[1360px] py-5 mt-50"> {/* Thêm margin-top ở đây */}
       {/* Phần đầu */}
       <div className="relative mb-8">
         <div className="flex justify-end">
